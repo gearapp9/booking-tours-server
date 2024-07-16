@@ -21,7 +21,7 @@ const app = express();
 
 app.use(helmet({crossOriginResourcePolicy: false}));
 
-app.use(cors({credentials: true}));
+app.use(cors({credentials: true,origin:"https://booking-tours-client.vercel.app"}));
 
 app.options("*",cors());
 

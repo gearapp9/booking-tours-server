@@ -21,7 +21,7 @@ const app = express();
 
 app.use(helmet({crossOriginResourcePolicy: false}));
 
-app.use(cors());
+app.use(cors({credentials: true}));
 
 app.options("*",cors());
 

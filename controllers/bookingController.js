@@ -36,7 +36,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   let { user, tour, price } = req.query;
 
-  if (!user && !tour && !price) next();
+  if (!user && !tour && !price) return next();
   const book = await Booking.create({ tour, user, price });
 
   user = null;
